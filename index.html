@@ -1,4 +1,5 @@
-html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,12 +45,12 @@ html lang="de">
             border-bottom: none;
             margin-bottom: 0;
         }
-        .job-item {
-            background-color: #f9f9f9;
-            border-left: 4px solid #f97316; /* Orange-500 accent */
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
+        .team-member-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        .team-member-item:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
@@ -67,7 +68,7 @@ html lang="de">
                 <ul class="flex space-x-4">
                     <li><a href="#home" class="nav-link text-lg font-semibold">Startseite</a></li>
                     <li><a href="#news" class="nav-link text-lg font-semibold">Straßen-News</a></li>
-                    <li><a href="#join-team" class="nav-link text-lg font-semibold">Team beitreten</a></li>
+                    <li><a href="#team-members" class="nav-link text-lg font-semibold">Teammitglieder</a></li>
                 </ul>
             </nav>
         </div>
@@ -80,7 +81,7 @@ html lang="de">
         <section id="home" class="section-card text-center">
             <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Willkommen bei SADOT!</h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-                Das SADOT ist für alle da. Wir helfen beim Straßenbau, bei Falschparkern, der Bauaufsicht, beim Abschleppen und vielem mehr. 
+                Das SADOT ist für alle da. Wir helfen beim Straßenbau, bei Falschparkern, der Bauaufsicht, beim Abschleppen und vielem mehr.
             </p>
             <button class="mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
                 Erfahren Sie mehr über uns
@@ -108,12 +109,23 @@ html lang="de">
             </p>
         </section>
 
-        <!-- New Section: How to join the team -->
-        <section id="join-team" class="section-card text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Wie man dem Team beitritt</h2>
-            <p class="text-lg text-gray-600 mb-4">
-                Bewerbung kommt bald!
-            </p>
+        <!-- Team Members Section -->
+        <section id="team-members" class="section-card text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Unsere Teammitglieder</h2>
+            <div class="text-lg text-gray-700">
+                <div class="team-member-item">
+                    <p class="font-semibold">Direktor der SADOT</p>
+                    <p>Shadow Dexter</p>
+                </div>
+                <div class="team-member-item">
+                    <p class="font-semibold">Projektleiter für Planung und Instandhaltung</p>
+                    <p>Gunnar Olafson</p>
+                </div>
+                <div class="team-member-item">
+                    <p class="font-semibold">Fachkraft für Infrastrukturtechnik</p>
+                    <p>Abdou Voncambridge</p>
+                </div>
+            </div>
         </section>
 
     </main>
