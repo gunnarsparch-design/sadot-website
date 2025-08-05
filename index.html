@@ -25,9 +25,13 @@
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             transition: background-color 0.3s ease;
+            cursor: pointer; /* Indicate clickable */
         }
         .nav-link:hover {
             background-color: #c2410c; /* Orange-800 */
+        }
+        .nav-link.active {
+            background-color: #c2410c; /* Active state */
         }
         .section-card {
             background-color: #ffffff;
@@ -93,132 +97,19 @@
             </div>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#home" class="nav-link text-lg font-semibold">Startseite</a></li>
-                    <li><a href="#news" class="nav-link text-lg font-semibold">Straßen-News</a></li>
-                    <li><a href="#team-members" class="nav-link text-lg font-semibold">Teammitglieder & Offene Stellen</a></li>
+                    <li><a class="nav-link text-lg font-semibold active" onclick="renderPage('home')">Startseite</a></li>
+                    <li><a class="nav-link text-lg font-semibold" onclick="renderPage('news')">Straßen-News</a></li>
+                    <li><a class="nav-link text-lg font-semibold" onclick="renderPage('team-members')">Teammitglieder & Offene Stellen</a></li>
+                    <li><a class="nav-link text-lg font-semibold" onclick="renderPage('applications')">Bewerbungen</a></li>
+                    <li><a class="nav-link text-lg font-semibold" onclick="renderPage('inquiries')">Anfragen</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="container py-8">
-
-        <!-- Home/Hero Section -->
-        <section id="home" class="section-card text-center">
-            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Willkommen bei SADOT!</h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
-                Das SADOT ist für alle da. Wir helfen beim Straßenbau, bei Falschparkern, der Bauaufsicht, beim Abschleppen und vielem mehr.
-            </p>
-            <button class="mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
-                Erfahren Sie mehr über uns
-            </button>
-        </section>
-
-        <!-- Road News Section -->
-        <section id="news" class="section-card">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Aktuelle Straßen-News & Ankündigungen</h2>
-
-            <div class="announcement-item">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">SADOT jetzt in La Mesa!</h3>
-                <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 05.08.25</p>
-                <p class="text-gray-600 mb-4">
-                    Wir freuen uns bekannt zu geben, dass die SADOT Abteilung nun auch in La Mesa zu finden ist! Unser neues Büro befindet sich in der Stadt PLZ 176. Kommen Sie vorbei und besuchen Sie uns!
-                </p>
-                <div class="flex justify-center">
-                    <!-- Image for La Mesa announcement -->
-                    <img src="image34.jpg" alt="SADOT Gebäude in La Mesa" class="w-full max-w-lg rounded-lg shadow-md">
-                </div>
-            </div>
-
-            <div class="announcement-item">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">Straßenarbeiten: Sinner Street (PLZ 217/210)</h3>
-                <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 04.08.25 | Auftragsnummer: RW-2025-001 | Vorbereitet von: Gunnar Olafson</p>
-                <p class="text-gray-600">
-                    **Status:** In Bearbeitung<br>
-                    **Standort:** PLZ 217/210, 210 Sinner Street<br>
-                    **Problembeschreibung:** Schlagloch, beschädigter Asphalt, rissiger Belag<br>
-                    **Geschätzte Dauer der Sperrung:** 1 Woche (Startdatum: 07.08.25)<br>
-                    **Fahrspursperrung:** Eine Fahrspur wird gesperrt.
-                </p>
-                <div class="flex justify-center mt-4">
-                    <!-- Image for Sinner Street announcement - now using image217.png -->
-                    <img src="image217.png" alt="Straßenarbeiten Sinner Street" class="w-full max-w-lg rounded-lg shadow-md">
-                </div>
-            </div>
-
-            <p class="text-center mt-6">
-                <a href="#" class="text-orange-600 hover:underline font-semibold">Alle Ankündigungen anzeigen</a>
-            </p>
-        </section>
-
-        <!-- Team Members & Open Positions Section (Rank Tree) -->
-        <section id="team-members" class="section-card text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Unsere Teammitglieder & Offene Stellen</h2>
-
-            <div class="flex flex-col items-center">
-                <!-- Oberste Leitung Group -->
-                <div class="rank-group">
-                    <p class="text-xl font-bold text-orange-700 mb-4">Oberste Leitung</p>
-                    <div class="flex flex-col items-center space-y-4">
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Direktor der SADOT</p>
-                            <p>Shadow Dexter</p>
-                        </div>
-                        <div class="rank-connector"></div>
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Stellvertretender Direktor der SADOT</p>
-                            <p>1 Freie Stelle</p>
-                        </div>
-                        <div class="rank-connector"></div>
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Projektleiter für Planung und Instandhaltung</p>
-                            <p>Gunnar Olafson</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Connection from Oberste Leitung -->
-                <div class="rank-connector h-8"></div>
-
-                <!-- Teamleiter -->
-                <div class="rank-item rank-level">
-                    <p class="font-semibold">Teamleiter</p>
-                    <p>1 Freie Stelle</p>
-                </div>
-
-                <!-- Branching for Fachkräfte and Azubi -->
-                <div class="rank-connector h-8"></div>
-                <div class="flex justify-center w-full">
-                    <div class="horizontal-connector w-2/3"></div>
-                </div>
-
-                <div class="flex flex-col md:flex-row justify-around w-full mt-4 space-y-4 md:space-y-0 md:space-x-4">
-                    <!-- Fachkraft für Straßeninstandhaltung & Azubi Branch -->
-                    <div class="flex flex-col items-center w-full md:w-1/2">
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Fachkraft für Straßeninstandhaltung</p>
-                            <p>5 Freie Stellen</p>
-                        </div>
-                        <div class="rank-connector"></div>
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Azubi</p>
-                            <p>5 Freie Stellen</p>
-                        </div>
-                    </div>
-
-                    <!-- Fachkraft für Infrastrukturtechnik Branch -->
-                    <div class="flex flex-col items-center w-full md:w-1/2">
-                        <div class="rank-item rank-level">
-                            <p class="font-semibold">Fachkraft für Infrastrukturtechnik</p>
-                            <p>Abdou Voncambridge</p>
-                            <p>4 Freie Stellen</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+    <!-- Main Content Area - This will be dynamically updated by JavaScript -->
+    <main id="content-area" class="container py-8">
+        <!-- Content will be loaded here by JavaScript -->
     </main>
 
     <!-- Footer Section -->
@@ -228,6 +119,179 @@
             <p class="text-sm mt-2">Erstellt für die FiveM Community.</p>
         </div>
     </footer>
+
+    <script>
+        // Function to render different pages
+        function renderPage(pageName) {
+            const contentArea = document.getElementById('content-area');
+            let pageContent = '';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to the clicked nav link
+            document.querySelector(`[onclick="renderPage('${pageName}')"]`).classList.add('active');
+
+
+            switch (pageName) {
+                case 'home':
+                    pageContent = `
+                        <section id="home" class="section-card text-center">
+                            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Willkommen bei SADOT!</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Das SADOT ist für alle da. Wir helfen beim Straßenbau, bei Falschparkern, der Bauaufsicht, beim Abschleppen und vielem mehr.
+                            </p>
+                            <button class="mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                                Erfahren Sie mehr über uns
+                            </button>
+                        </section>
+                    `;
+                    break;
+                case 'news':
+                    pageContent = `
+                        <section id="news" class="section-card">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Aktuelle Straßen-News & Ankündigungen</h2>
+
+                            <div class="announcement-item">
+                                <h3 class="text-xl font-semibold text-gray-700 mb-2">SADOT jetzt in La Mesa!</h3>
+                                <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 05.08.25</p>
+                                <p class="text-gray-600 mb-4">
+                                    Wir freuen uns bekannt zu geben, dass die SADOT Abteilung nun auch in La Mesa zu finden ist! Unser neues Büro befindet sich in der Stadt PLZ 176. Kommen Sie vorbei und besuchen Sie uns!
+                                </p>
+                                <div class="flex justify-center">
+                                    <img src="image34.jpg" alt="SADOT Gebäude in La Mesa" class="w-full max-w-lg rounded-lg shadow-md">
+                                </div>
+                            </div>
+
+                            <div class="announcement-item">
+                                <h3 class="text-xl font-semibold text-gray-700 mb-2">Straßenarbeiten: Sinner Street (PLZ 217/210)</h3>
+                                <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 04.08.25 | Auftragsnummer: RW-2025-001 | Vorbereitet von: Gunnar Olafson</p>
+                                <p class="text-gray-600">
+                                    **Status:** In Bearbeitung<br>
+                                    **Standort:** PLZ 217/210, 210 Sinner Street<br>
+                                    **Problembeschreibung:** Schlagloch, beschädigter Asphalt, rissiger Belag<br>
+                                    **Geschätzte Dauer der Sperrung:** 1 Woche (Startdatum: 07.08.25)<br>
+                                    **Fahrspursperrung:** Eine Fahrspur wird gesperrt.
+                                </p>
+                                <div class="flex justify-center mt-4">
+                                    <img src="image217.png" alt="Straßenarbeiten Sinner Street" class="w-full max-w-lg rounded-lg shadow-md">
+                                </div>
+                            </div>
+
+                            <p class="text-center mt-6">
+                                <a href="#" class="text-orange-600 hover:underline font-semibold">Alle Ankündigungen anzeigen</a>
+                            </p>
+                        </section>
+                    `;
+                    break;
+                case 'team-members':
+                    pageContent = `
+                        <section id="team-members" class="section-card text-center">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Unsere Teammitglieder & Offene Stellen</h2>
+
+                            <div class="flex flex-col items-center">
+                                <!-- Oberste Leitung Group -->
+                                <div class="rank-group">
+                                    <p class="text-xl font-bold text-orange-700 mb-4">Oberste Leitung</p>
+                                    <div class="flex flex-col items-center space-y-4">
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Direktor der SADOT</p>
+                                            <p>Shadow Dexter</p>
+                                        </div>
+                                        <div class="rank-connector"></div>
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Stellvertretender Direktor der SADOT</p>
+                                            <p>1 Freie Stelle</p>
+                                        </div>
+                                        <div class="rank-connector"></div>
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Projektleiter für Planung und Instandhaltung</p>
+                                            <p>Gunnar Olafson</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Connection from Oberste Leitung -->
+                                <div class="rank-connector h-8"></div>
+
+                                <!-- Teamleiter -->
+                                <div class="rank-item rank-level">
+                                    <p class="font-semibold">Teamleiter</p>
+                                    <p>1 Freie Stelle</p>
+                                </div>
+
+                                <!-- Branching for Fachkräfte and Azubi -->
+                                <div class="rank-connector h-8"></div>
+                                <div class="flex justify-center w-full">
+                                    <div class="horizontal-connector w-2/3"></div>
+                                </div>
+
+                                <div class="flex flex-col md:flex-row justify-around w-full mt-4 space-y-4 md:space-y-0 md:space-x-4">
+                                    <!-- Fachkraft für Straßeninstandhaltung & Azubi Branch -->
+                                    <div class="flex flex-col items-center w-full md:w-1/2">
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Fachkraft für Straßeninstandhaltung</p>
+                                            <p>5 Freie Stellen</p>
+                                        </div>
+                                        <div class="rank-connector"></div>
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Azubi</p>
+                                            <p>5 Freie Stellen</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fachkraft für Infrastrukturtechnik Branch -->
+                                    <div class="flex flex-col items-center w-full md:w-1/2">
+                                        <div class="rank-item rank-level">
+                                            <p class="font-semibold">Fachkraft für Infrastrukturtechnik</p>
+                                            <p>Abdou Voncambridge</p>
+                                            <p>4 Freie Stellen</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    `;
+                    break;
+                case 'applications':
+                    pageContent = `
+                        <section id="applications" class="section-card text-center">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Bewerbungen</h2>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Bewerbungen kommen bald! Hier wird bald ein Link zu unserem Bewerbungsformular verfügbar sein.
+                            </p>
+                            <!-- Placeholder for application form link -->
+                            <a href="#" class="mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                                Zum Bewerbungsformular (Link kommt bald)
+                            </a>
+                        </section>
+                    `;
+                    break;
+                case 'inquiries':
+                    pageContent = `
+                        <section id="inquiries" class="section-card text-center">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Anfragen</h2>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Für Anfragen nutzen Sie bitte unser Formular, das hier bald verlinkt wird.
+                            </p>
+                            <!-- Placeholder for inquiry form link -->
+                            <a href="#" class="mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                                Zum Anfrageformular (Link kommt bald)
+                            </a>
+                        </section>
+                    `;
+                    break;
+                default:
+                    pageContent = `<p class="text-center text-red-500">Seite nicht gefunden.</p>`;
+            }
+            contentArea.innerHTML = pageContent;
+        }
+
+        // Load the home page by default when the page loads
+        window.onload = () => renderPage('home');
+    </script>
 
 </body>
 </html>
