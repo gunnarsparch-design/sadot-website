@@ -48,9 +48,14 @@
         .team-member-item {
             padding: 0.75rem 0;
             border-bottom: 1px dashed #e0e0e0;
+            text-align: left; /* Align text to the left within each item */
         }
         .team-member-item:last-child {
             border-bottom: none;
+        }
+        .team-member-item strong {
+            display: block; /* Make the role bold and on its own line */
+            margin-bottom: 0.25rem;
         }
     </style>
 </head>
@@ -61,14 +66,14 @@
         <div class="container flex flex-col md:flex-row justify-between items-center py-4">
             <div class="flex items-center mb-4 md:mb-0">
                 <!-- DOT Logo -->
-                <img src="image_1fc96e.jpg" alt="SA DOT Logo" class="w-16 h-16 mr-3 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/cccccc/333333?text=DOT+Logo';">
+                <img src="image34.jpg" alt="SA DOT Logo" class="w-16 h-16 mr-3 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/cccccc/333333?text=DOT+Logo';">
                 <h1 class="text-3xl font-bold">SADOT</h1>
             </div>
             <nav>
                 <ul class="flex space-x-4">
                     <li><a href="#home" class="nav-link text-lg font-semibold">Startseite</a></li>
                     <li><a href="#news" class="nav-link text-lg font-semibold">Straßen-News</a></li>
-                    <li><a href="#team-members" class="nav-link text-lg font-semibold">Teammitglieder</a></li>
+                    <li><a href="#team-members" class="nav-link text-lg font-semibold">Teammitglieder & Offene Stellen</a></li>
                 </ul>
             </nav>
         </div>
@@ -93,6 +98,17 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Aktuelle Straßen-News & Ankündigungen</h2>
 
             <div class="announcement-item">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">SADOT jetzt in La Mesa!</h3>
+                <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 05.08.25</p>
+                <p class="text-gray-600 mb-4">
+                    Wir freuen uns bekannt zu geben, dass die SADOT Abteilung nun auch in La Mesa zu finden ist! Unser neues Büro befindet sich in der Stadt PLZ 176. Kommen Sie vorbei und besuchen Sie uns!
+                </p>
+                <div class="flex justify-center">
+                    <img src="image_591086.jpg" alt="SADOT Gebäude in La Mesa" class="w-full max-w-lg rounded-lg shadow-md">
+                </div>
+            </div>
+
+            <div class="announcement-item">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Straßenarbeiten: Sinner Street (PLZ 217/210)</h3>
                 <p class="text-sm text-gray-500 mb-2">Veröffentlicht: 04.08.25 | Auftragsnummer: RW-2025-001 | Vorbereitet von: Gunnar Olafson</p>
                 <p class="text-gray-600">
@@ -111,19 +127,37 @@
 
         <!-- Team Members Section -->
         <section id="team-members" class="section-card text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Unsere Teammitglieder</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Unsere Teammitglieder & Offene Stellen</h2>
             <div class="text-lg text-gray-700">
+                <p class="text-base font-semibold text-gray-600 mb-4">Die Oberste Leitung sind die drei obersten Rollen:</p>
                 <div class="team-member-item">
                     <p class="font-semibold">Direktor der SADOT</p>
                     <p>Shadow Dexter</p>
+                </div>
+                <div class="team-member-item">
+                    <p class="font-semibold">Stellvertretender Direktor der SADOT</p>
+                    <p>1 Freie Stelle</p>
                 </div>
                 <div class="team-member-item">
                     <p class="font-semibold">Projektleiter für Planung und Instandhaltung</p>
                     <p>Gunnar Olafson</p>
                 </div>
                 <div class="team-member-item">
+                    <p class="font-semibold">Teamleiter</p>
+                    <p>1 Freie Stelle</p>
+                </div>
+                <div class="team-member-item">
+                    <p class="font-semibold">Fachkraft für Straßeninstandhaltung</p>
+                    <p>5 Freie Stellen</p>
+                </div>
+                <div class="team-member-item">
                     <p class="font-semibold">Fachkraft für Infrastrukturtechnik</p>
                     <p>Abdou Voncambridge</p>
+                    <p>4 Freie Stellen</p>
+                </div>
+                <div class="team-member-item">
+                    <p class="font-semibold">Azubi</p>
+                    <p>5 Freie Stellen</p>
                 </div>
             </div>
         </section>
@@ -134,7 +168,7 @@
     <footer class="bg-orange-700 text-white py-6 text-center shadow-inner">
         <div class="container">
             <p>&copy; 2025 SADOT. Alle Rechte vorbehalten.</p>
-            <p class="text-sm mt-2">Erstellt für die FiveM Community.</p>
+            <p class="text-sm mt-2">Erstellt für die Southland RP Community.</p>
         </div>
     </footer>
 
